@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Antigravity 2048 - Puzzle Premium</title>
+    <meta name="description"
+        content="Um clone moderno e elegante do clássico 2048, desenvolvido com Antigravity engine.">
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@500;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="game-header">
+            <div class="title-section">
+                <h1 class="logo">2048</h1>
+                <p class="subtitle">Antigravity Edition</p>
+            </div>
+
+            <div class="score-board">
+                <div class="score-box" id="current-score-box">
+                    <span class="label">SCORE</span>
+                    <span class="value" id="score">0</span>
+                    <div class="score-addition" id="score-addition">+0</div>
+                </div>
+                <div class="score-box" id="best-score-box">
+                    <span class="label">BEST</span>
+                    <span class="value" id="best-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="game-intro">
+            <p>Combine os blocos para chegar ao <strong>2048!</strong></p>
+            <button id="restart-btn" class="btn-primary">Novo Jogo</button>
+        </section>
+
+        <main class="game-container">
+            <div id="game-grid" class="grid-container">
+                <!-- Background cells -->
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+                <div class="grid-cell"></div>
+
+                <!-- Moving tiles -->
+                <div id="tile-container"></div>
+            </div>
+
+            <div id="game-message" class="game-message hidden">
+                <p></p>
+                <div class="lower">
+                    <button class="btn-secondary keep-playing-button">Continuar</button>
+                    <button class="btn-primary retry-button">Tentar Novamente</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="game-footer">
+            <p>Use as <strong>setas do teclado</strong> ou <strong>deslize</strong> para jogar.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
